@@ -1,0 +1,13 @@
+
+---
+
+### 2. `.gitignore`
+```gitignore
+.gradle/
+/local.properties
+/.idea/
+/build/
+/captures/
+.externalNativeBuild/
+/*.iml
+/app/google-services.json

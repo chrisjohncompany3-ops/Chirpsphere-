@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+            android:orientation="vertical"
+                android:padding="8dp">
+
+                    <ImageView
+                            android:id="@+id/imgPost"
+                                    android:layout_width="match_parent"
+                                            android:layout_height="200dp"
+                                                    android:scaleType="centerCrop" />
+
+                                                        <TextView
+                                                                android:id="@+id/tvCaption"
+                                                                        android:layout_width="wrap_content"
+                                                                                android:layout_height="wrap_content"
+                                                                                        android:text="Post caption"
+                                                                                                android:padding="4dp" />
+
+                                                                                                    <Button
+                                                                                                            android:id="@+id/btnComment"
+                                                                                                                    android:layout_width="wrap_content"
+                                                                                                                            android:layout_height="wrap_content"
+                                                                                                                                    android:text="@string/comment" />
+
+                                                                                                                                        <Button
+                                                                                                                                                android:id="@+id/btnLinkFriend"
+                                                                                                                                                        android:layout_width="wrap_content"
+                                                                                                                                                                android:layout_height="wrap_content"
+                                                                                                                                                                        android:text="@string/link" />
+
+                                                                                                                                                                            <Button
+                                                                                                                                                                                    android:id="@+id/btnLinkUp"
+                                                                                                                                                                                            android:layout_width="wrap_content"
+                                                                                                                                                                                                    android:layout_height="wrap_content"
+                                                                                                                                                                                                            android:text="Link Up" />
+
+                                                                                                                                                                                                            </LinearLayout>
+                                                                                                                                                                                                            

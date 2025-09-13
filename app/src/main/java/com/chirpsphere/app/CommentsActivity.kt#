@@ -1,0 +1,64 @@
+package com.chirpsphere.app
+
+import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+
+class CommentsActivity : AppCompatActivity() {
+
+        private lateinit var recyclerView: RecyclerView
+            private lateinit var adapter: PostAdapter
+                private val comments = mutableListOf<Post>()
+                    private lateinit var db: FirebaseFirestore
+                        private lateinit var auth: FirebaseAuth
+
+                            override fun onCreate(savedInstanceState: Bundle?) {
+                                        super.onCreate(savedInstanceState)
+                                                setContentView(R.layout.activity_comments)
+
+                                                        db = FirebaseFirestore.getInstance()
+                                                                auth = FirebaseAuth.getInstance()
+
+                                                                        recyclerView = findViewById(R.id.recyclerViewComments)
+                                                                                recyclerView.layoutManager = LinearLayoutManager(this)
+                                                                                        adapter = PostAdapter(comments)
+                                                                                                recyclerView.adapter = adapter
+
+                                                                                                        val btnSend = findViewById<Button>(R.id.btnSend)
+                                                                                                                val etComment = findViewById<EditText>(R.id.etComment)
+
+                                                                                                                        btnSend.setOnClickListener {
+                                                                                                                                        val text = etComment.text.toString()
+                                                                                                                                                    val userId = auth.currentUser?.uid ?: ""
+
+                                                                                                                                                                if (text.isNotEmpty()) {
+                                                                                                                                                                                    val comment = Post(userId, text)
+                                                                                                                                                                                                    db.collection("comments").add(comment)
+                                                                                                                                                                                                                    etComment.text.clear()
+                                                                                                                                                                }
+                                                                                                                        }
+
+                                                                                                                                db.collection("comments").addSnapshotListener { snapshot, _ ->
+                                                                                                                                            if (snapshot != null) {
+                                                                                                                                                                comments.clear()
+                                                                                                                                                                                for (doc in snapshot) {
+                                                                                                                                                                                                        val post = doc.toObject(Post::class.java)
+                                                                                                                                                                                                                            comments.add(post)
+                                                                                                                                                                                }
+                                                                                                                                                                                                adapter.notifyDataSetChanged()
+                                                                                                                                            }
+                                                                                                                                }
+                            }
+}
+
+                                                                                                                                                                                }
+                                                                                                                                            }}
+                                                                                                                                                                }
+                                                                                                                        }
+                            }
+}

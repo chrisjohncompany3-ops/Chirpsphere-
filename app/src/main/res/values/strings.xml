@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Chirpsphere</string>
+        <string name="login">Login</string>
+            <string name="register">Register</string>
+                <string name="email">Email</string>
+                    <string name="password">Password</string>
+                        <string name="post">Post</string>
+                            <string name="pick_image">Pick Image</string>
+                                <string name="comment">Comment</string>
+                                    <string name="link">Link</string>
+                                        <string name="unlink">Unlink</string>
+                                        </resources>
+                                        

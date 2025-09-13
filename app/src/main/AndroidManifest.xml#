@@ -1,0 +1,22 @@
+<manifest package="com.chirpsphere.app"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <uses-permission android:name="android.permission.INTERNET" />
+
+            <application
+                    android:allowBackup="true"
+                            android:label="ChirpSphere"
+                                    android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+                                            <activity android:name="com.chirpsphere.app.RegisterActivity" />
+                                                    <activity android:name="com.chirpsphere.app.LoginActivity" />
+                                                            <activity android:name="com.chirpsphere.app.CommentsActivity" />
+                                                                    <activity android:name="com.chirpsphere.app.MainActivity">
+                                                                                <intent-filter>
+                                                                                                <action android:name="android.intent.action.MAIN" />
+                                                                                                                <category android:name="android.intent.category.LAUNCHER" />
+                                                                                                                            </intent-filter>
+                                                                                                                                    </activity>
+                                                                                                                                        </application>
+                                                                                                                                        </manifest>
+                                                                                                                                        
