@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "950761601469",
+    "project_id": "chirpsphere-rk8wh",
+    "storage_bucket": "chirpsphere-rk8wh.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950761601469:android:d07a176f79d11919073ad4",
+        "android_client_info": {
+          "package_name": "com.chirpsphere.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950761601469-g2f8bnc9qp2uvtirsto5ethjop882gvk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARrDG7E1YL6stpsdiClVdWNoTvkl1pk14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950761601469-g2f8bnc9qp2uvtirsto5ethjop882gvk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
