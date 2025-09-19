@@ -3,11 +3,16 @@ buildscript {
                 google()
                         mavenCentral()
                             }
-                                dependencies {
+                                dependencies {buildscript {
+                                            dependencies {
+                                                    classpath "com.google.gms:google-services:4.4.2" // Google Services plugin
+                                                        }
+                                                        }
+                                }
                                         classpath 'com.android.tools.build:gradle:7.4.2'
                                                 classpath 'com.google.gms:google-services:4.4.0'
                                                     }
-                                                    }
+                                                    
 
                                                     allprojects {
                                                         repositories {
@@ -16,4 +21,3 @@ buildscript {
                                                                             }
                                                                             }
                                                                             
-}

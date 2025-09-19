@@ -1,9 +1,15 @@
-# Add project specific ProGuard rules here.
-# By default, the flags in this file are appended to the global ProGuard rules.
+# ProGuard rules for ChirpSphere
 
-# Keep Firebase models
--keepclassmembers class * {
-        @com.google.firebase.firestore.PropertyName <fields>;
+# Keep Firebase model classes
+-keepclassmembers class com.chirpsphere.app.models.** {
+            <fields>;
+                <methods>;
 }
 
+# Keep Firebase and Google Play services classes
+-keep class com.google.firebase.** { *; }
+-keep class com.google.android.gms.** { *; }
+
+# Keep Kotlin metadata
+-keepclassmembers class kotlin.Metadata { *; }
 }

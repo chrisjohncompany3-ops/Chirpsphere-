@@ -1,11 +1,24 @@
-# ChirpSphere
+# ChirpSphere App
 
-Minimal starter for ChirpSphere (Kotlin + Firebase)
+ChirpSphere is a social networking Android app where users can:
+- Create accounts and log in
+- Post text and images
+- Comment on posts
+- Like posts
+- Add friends (“Link Friend”)
+- Follow users (“Link Up”)
+- See followers (“Linkers”)
 
-## Setup
-1. Register your Android app in Firebase Console. Use package name: `com.chirpsphere.app`.
-2. Download `google-services.json` and place it inside `app/`.
-3. Open the project in GitHub Codespaces (or Android Studio) and run:
+## Tech Stack
+- **Kotlin** for Android
+- **Firebase Authentication** for user accounts
+- **Firebase Firestore** for database
+- **Firebase Storage** for image uploads
 
+## Getting Started
+1. Clone this repository.
+2. Add your `google-services.json` file inside the `app/` directory.
+3. Sync Gradle.
+4. Build & run the app:
    ```bash
       ./gradlew assembleDebug
